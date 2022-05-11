@@ -1,83 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="css/style.css">
-  <title>Social Media Dashboard Theme Switcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Social Media Dashboard Theme Switcher</title>
+  </head>
+  <body>
+    <main>
+      <section class="section-container">
+        <section class="social-media-dashboard-container">
+          <div class="social-media-dashboard-header">
+            <div class="text">
+              <h1>Social Media Dashboard</h1>
+              <p>Total Followers: 23,004</p>
+            </div>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+            <div class="toggle-checkbox">
+              <label for="toggle">Dark Mode</label>
+              <input type="checkbox" name="toggle" id="toggle" />
+            </div>
+          </div>
 
-  Dark Mode
+          <div class="social-media-dashboard-cards">
+            <div class="card">
+              <div class="user">
+                <img src="images/icon-facebook.svg" alt="Facebook Logo Icon" />
+                <p>@nathanf</p>
+              </div>
+              <div class="followers">
+                <p>1987</p>
+                <p>Followers</p>
+              </div>
+              <div class="today">
+                <img src="images/icon-up.svg" alt="Arrow Up Icon" />
+                <p>12 Today</p>
+              </div>
+            </div>
 
-  
+            <div class="card">
+              <div class="user">
+                <img src="images/icon-twitter.svg" alt="Twitter Logo Icon" />
+                <p>@nathanf</p>
+              </div>
+              <div class="followers">
+                <p>1044</p>
+                <p>Followers</p>
+              </div>
+              <div class="today">
+                <img src="images/icon-up.svg" alt="Arrow Up Icon" />
+                <p>99 Today</p>
+              </div>
+            </div>
 
-  @nathanf
-  1987
-  Followers
-  12 Today
+            <div class="card">
+              <div class="user">
+                <img
+                  src="images/icon-instagram.svg"
+                  alt="Instagram Logo Icon"
+                />
+                <p>@realnathanf</p>
+              </div>
+              <div class="followers">
+                <p>11k</p>
+                <p>Followers</p>
+              </div>
+              <div class="today">
+                <img src="images/icon-up.svg" alt="Arrow Up Icon" />
+                <p>1099 Today</p>
+              </div>
+            </div>
 
-  @nathanf
-  1044
-  Followers
-  99 Today
+            <div class="card">
+              <div class="user">
+                <img src="images/icon-youtube.svg" alt="Youtube Logo Icon" />
+                <p>Nathan F.</p>
+              </div>
+              <div class="followers">
+                <p>8239</p>
+                <p>Subscribers</p>
+              </div>
+              <div class="today">
+                <img src="images/icon-down.svg" alt="Arrow Down Icon" />
+                <p>144 Today</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-  @realnathanf
-  11k
-  Followers
-  1099 Today
+        <section class="overview-container">
+          <h2>Overview - Today</h2>
+          <div class="overview-cards">
+            <div class="overview-card">
+              <div class="info-card">
+                <p>Page Views</p>
+                <p>87</p>
+              </div>
+              <div class="social-media-card">
+                <img src="images/icon-facebook.svg" alt="Facebook Logo Icon" />
+                <div class="social-media-card-percentage">
+                  <img src="images/icon-up.svg" alt="Arrow Up Icon" />
+                  <p>3%</p>
+                </div>
+              </div>
+            </div>
 
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+            <div class="overview-card">
+              <div class="info-card">
+                <p>Likes</p>
+                <p>52</p>
+              </div>
+              <div class="social-media-card">
+                <img src="images/icon-facebook.svg" alt="Facebook Logo Icon" />
+                <div class="social-media-card-percentage">
+                  <img src="images/icon-down.svg" alt="Arrow Down Icon" />
+                  <p>2%</p>
+                </div>
+              </div>
+            </div>
 
+            <div class="overview-card">
+              <div class="info-card">
+                <p>Likes</p>
+                <p>5462</p>
+              </div>
+              <div class="social-media-card">
+                <img src="images/icon-instagram.svg" alt="Intagram Logo Icon" />
+                <div class="social-media-card-percentage">
+                  <img src="images/icon-up.svg" alt="Arrow Up Icon" />
+                  <p>2257%</p>
+                </div>
+              </div>
+            </div>
 
+            <div class="overview-card">
+              <div class="info-card">
+                <p>Profile Views</p>
+                <p>52k</p>
+              </div>
+              <div class="social-media-card">
+                <img
+                  src="images/icon-instagram.svg"
+                  alt="Instagram Logo Icon"
+                />
+                <div class="social-media-card-percentage">
+                  <img src="images/icon-up.svg" alt="Arrow Up Icon" />
+                  <p>1375%</p>
+                </div>
+              </div>
+            </div>
 
-  Overview - Today
+            <div class="overview-card">
+              <div class="info-card">
+                <p>Retweets</p>
+                <p>117</p>
+              </div>
+              <div class="social-media-card">
+                <img src="images/icon-twitter.svg" alt="Twitter Logo Icon" />
+                <div class="social-media-card-percentage">
+                  <img src="images/icon-up.svg" alt="Arrow Up Icon" />
+                  <p>303%</p>
+                </div>
+              </div>
+            </div>
 
-  Page Views
-  87
-  3%
+            <div class="overview-card">
+              <div class="info-card">
+                <p>Likes</p>
+                <p>507</p>
+              </div>
+              <div class="social-media-card">
+                <img src="images/icon-twitter.svg" alt="Twitter Logo Icon" />
+                <div class="social-media-card-percentage">
+                  <img src="images/icon-up.svg" alt="Arrow Up Icon" />
+                  <p>553%</p>
+                </div>
+              </div>
+            </div>
 
-  Likes
-  52
-  2%
+            <div class="overview-card">
+              <div class="info-card">
+                <p>Likes</p>
+                <p>107</p>
+              </div>
+              <div class="social-media-card">
+                <img src="images/icon-youtube.svg" alt="YouTube Logo Icon" />
+                <div class="social-media-card-percentage">
+                  <img src="images/icon-down.svg" alt="Arrow Down Icon" />
+                  <p>19%</p>
+                </div>
+              </div>
+            </div>
 
-  Likes
-  5462
-  2257%
+            <div class="overview-card">
+              <div class="info-card">
+                <p>Total Views</p>
+                <p>1407</p>
+              </div>
+              <div class="social-media-card">
+                <img src="images/icon-youtube.svg" alt="Youtube Logo Icon" />
+                <div class="social-media-card-percentage">
+                  <img src="images/icon-down.svg" alt="Arrow Down Icon" />
+                  <p>12%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
 
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
- <script src="js/script.js"></script>
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>
