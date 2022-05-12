@@ -13,11 +13,12 @@
 
   --light-grayish-blue: hsl(227, 47%, 96%);
 
-  --toggle-primary: hsl(210, 78%, 56%);
-  --toggle-secondary: hsl(146, 68%, 55%);
+  --toggle-primary: hsl(228, 12%, 44%);
+  --toggle-secondary: hsl(228, 34%, 66%);
   --primary-text-color: hsl(230, 17%, 14%);
   --secondary-text-color: hsl(228, 12%, 44%);
   --cards-background: hsl(225, 100%, 98%);
+
   /* Dark Theme */
   /* --very-dark-blue: hsl(230, 17%, 14%);
   --very-dark-blue: hsl(232, 19%, 15%);
@@ -52,10 +53,9 @@ body {
 
 /* ====================================== */
 /* SOCIAL MEDIA DASHBOARD SECTION */
+/* ====================================== */
 .social-media-dashboard-container {
-  display: flex;
-  flex-direction: column;
-  gap: 4.8rem;
+  margin-bottom: 4.2rem;
 }
 
 .social-media-dashboard-info {
@@ -81,21 +81,71 @@ body {
   color: var(--secondary-text-color);
 }
 
-.social-media-dashboard-info .toggle-checkbox {
+/* TOGGLE BUTTON */
+.social-media-dashboard-info .toggle-checkbox .switch {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--secondary-text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.social-media-dashboard-info .toggle-checkbox label {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--secondary-text-color);
+.toggle-checkbox .switch .switch-wrapper {
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  position: relative;
 }
+
+.switch .switch-wrapper .switch-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 40px;
+  background-image: linear-gradient(
+    to left,
+    var(--toggle-primary),
+    var(--toggle-secondary)
+  );
+}
+
+.switch .switch-wrapper input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch .switch-wrapper .switch-btn::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  background-color: var(--white);
+}
+
+/* .switch .switch-wrapper input:checked + .switch-btn{
+  background-image: linear-gradient(to left, var(--toggle-primary), red);
+} */
+
+.switch .switch-wrapper input:checked + .switch-btn::before {
+  transform: translateX(25px);
+}
+
 /* CARDS */
 .social-media-dashboard-cards {
   display: grid;
   gap: 2rem;
+  margin-top: 3.8rem;
 }
 
 .card {
@@ -162,9 +212,20 @@ body {
 }
 
 .social-media-dashboard-cards .card:nth-child(3) {
-  border-top: 4px solid var(--instagram-primary);
+  border-top: 4px solid var(--instagram-secondary);
 }
 
 .social-media-dashboard-cards .card:last-child {
   border-top: 4px solid var(--youTube);
+}
+
+/* ====================================== */
+/* OVERVIEW SECTION */
+/* ====================================== */
+
+.overview-container h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--secondary-text-color);
+  margin-bottom: 2.2rem;
 }
