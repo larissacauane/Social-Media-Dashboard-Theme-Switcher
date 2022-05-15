@@ -18,6 +18,7 @@
   --primary-text-color: hsl(230, 17%, 14%);
   --secondary-text-color: hsl(228, 12%, 44%);
   --cards-background: hsl(225, 100%, 98%);
+  --cards-background-hover: hsl(228, 54%, 75%);
 
   /* Dark Theme */
   /* --very-dark-blue: hsl(230, 17%, 14%);
