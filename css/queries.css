@@ -1,0 +1,27 @@
+@media screen and (min-width: 40em) {
+  .social-media-dashboard-info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  hr {
+    visibility: hidden;
+  }
+
+  .social-media-dashboard-info .toggle-checkbox .switch {
+    gap: 1rem;
+  }
+
+  .social-media-dashboard-cards,
+  .overview-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .social-media-dashboard-cards,
+  .overview-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
