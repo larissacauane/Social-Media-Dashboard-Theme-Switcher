@@ -10,15 +10,13 @@
 
   /* Light Theme */
   --white: hsl(0, 0%, 100%);
-
-  --light-grayish-blue: hsl(227, 47%, 96%);
-
-  --toggle-primary: hsl(228, 12%, 44%);
-  --toggle-secondary: hsl(228, 34%, 66%);
+  --toggle-primary: hsl(190, 47%, 45%);
+  --toggle-secondary: hsl(171, 54%, 47%);
+  --toggle-tertiary: hsl(143, 100%, 71%);
   --primary-text-color: hsl(230, 17%, 14%);
   --secondary-text-color: hsl(228, 12%, 44%);
-  --cards-background: hsl(225, 100%, 98%);
-  --cards-background-hover: hsl(228, 54%, 75%);
+  --cards-background: hsl(227, 47%, 96%);
+  --cards-background-hover: hsl(240, 33%, 91%);
 
   /* Dark Theme */
   /* --very-dark-blue: hsl(230, 17%, 14%);
@@ -82,7 +80,7 @@ body {
   color: var(--secondary-text-color);
 }
 
-/* TOGGLE BUTTON */
+/* TOGGLE BUTTON ==============================*/
 .social-media-dashboard-info .toggle-checkbox .switch {
   font-size: 1.4rem;
   font-weight: 700;
@@ -94,8 +92,8 @@ body {
 
 .toggle-checkbox .switch .switch-wrapper {
   display: inline-block;
-  width: 50px;
-  height: 25px;
+  width: 45px;
+  height: 22px;
   position: relative;
 }
 
@@ -110,10 +108,12 @@ body {
   align-items: center;
   border-radius: 40px;
   background-image: linear-gradient(
-    to left,
+    45deg,
     var(--toggle-primary),
-    var(--toggle-secondary)
+    var(--toggle-secondary),
+    var(--toggle-tertiary)
   );
+  cursor: pointer;
 }
 
 .switch .switch-wrapper input {
@@ -127,8 +127,8 @@ body {
   width: 16px;
   height: 16px;
   position: absolute;
-  left: 4px;
-  bottom: 4px;
+  left: 2px;
+  bottom: 3px;
   border-radius: 50%;
   transition: all 0.4s ease;
   background-color: var(--white);
@@ -142,14 +142,14 @@ body {
   transform: translateX(25px);
 }
 
-/* CARDS */
+/* CARDS ============================== */
 .social-media-dashboard-cards {
   display: grid;
   gap: 2rem;
   margin-top: 3.8rem;
 }
 
-.card {
+.social-media-dashboard-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -157,76 +157,144 @@ body {
   padding: 3.6rem 0;
   background-color: var(--cards-background);
   border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.card .user {
+.social-media-dashboard-card:hover {
+  background-color: var(--cards-background-hover);
+  cursor: pointer;
+}
+
+.social-media-dashboard-card .user {
   display: flex;
   align-items: center;
   gap: 0.8rem;
 }
 
-.card .user p {
+.social-media-dashboard-card .user p {
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--secondary-text-color);
 }
 
-.card .followers {
+.social-media-dashboard-card .followers {
   text-align: center;
 }
 
-.card .followers p:first-child {
+.social-media-dashboard-card .followers p:first-child {
   font-size: 4.8rem;
   font-weight: 700;
   color: var(--primary-text-color);
 }
 
-.card .followers p {
+.social-media-dashboard-card .followers p {
   font-size: 1.4rem;
   font-weight: 400;
   color: var(--secondary-text-color);
   letter-spacing: 10px;
 }
 
-.card .today {
+.social-media-dashboard-card .today {
   display: flex;
   align-items: center;
   gap: 0.4rem;
 }
 
-.card .today p {
+.social-media-dashboard-card .today p {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--lime-green);
 }
 
-.card:last-child .today p:last-child {
+.social-media-dashboard-card:last-child .today p:last-child {
   color: var(--bright-red);
 }
 
-.social-media-dashboard-cards .card:first-child {
+.social-media-dashboard-cards .social-media-dashboard-card:first-child {
   border-top: 4px solid var(--facebook);
 }
 
-.social-media-dashboard-cards .card:nth-child(2) {
+.social-media-dashboard-cards .social-media-dashboard-card:nth-child(2) {
   border-top: 4px solid var(--twitter);
 }
 
-.social-media-dashboard-cards .card:nth-child(3) {
+.social-media-dashboard-cards .social-media-dashboard-card:nth-child(3) {
   border-top: 4px solid var(--instagram-secondary);
 }
 
-.social-media-dashboard-cards .card:last-child {
+.social-media-dashboard-cards .social-media-dashboard-card:last-child {
   border-top: 4px solid var(--youTube);
 }
 
 /* ====================================== */
 /* OVERVIEW SECTION */
 /* ====================================== */
-
 .overview-container h2 {
   font-size: 2.2rem;
   font-weight: 700;
   color: var(--secondary-text-color);
-  margin-bottom: 2.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.overview-cards {
+  display: grid;
+  gap: 2rem;
+}
+
+.overview-card {
+  background-color: var(--cards-background);
+  padding: 2.4rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.overview-card:hover {
+  background-color: var(--cards-background-hover);
+  cursor: pointer;
+}
+
+.overview-card .overview-card-media,
+.overview-card-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overview-card .overview-card-media p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--secondary-text-color);
+}
+
+.overview-card .overview-card-total p:first-child {
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: var(--primary-text-color);
+}
+
+.overview-card .overview-card-total .percentage {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.overview-card .overview-card-total .percentage p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--lime-green);
+}
+
+.overview-card:nth-child(2) .overview-card-total .percentage p {
+  color: var(--bright-red);
+}
+
+.overview-card:nth-child(7) .overview-card-total .percentage p {
+  color: var(--bright-red);
+}
+
+.overview-card:nth-child(8) .overview-card-total .percentage p {
+  color: var(--bright-red);
 }
